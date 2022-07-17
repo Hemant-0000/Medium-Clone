@@ -8,6 +8,49 @@ import CPlogo from '../public/static/cp.png'
 import Qazi from '../public/static/qazi.jpg'
 import JSLogo from '../public/static/jsLogo.png'
 
+const recommendedPost = [
+    {
+        title: "What can you do with Replit?",
+        image: ReplitLogo,
+        author: {
+            name: "Clever Programmer",
+            image: CPlogo
+        }
+    },
+    {
+        title: "The ultimate JavaScript Course for beginners by Clever Programmer!",
+        image: TutorialImg,
+        author: {
+            name: "Rafeh Qazi",
+            image: Qazi
+        }
+    },
+    {
+        title: "How to become a developer in 2022?",
+        image: JSLogo,
+        author: {
+            name: "Clever Programmer",
+            image: CPlogo
+        }
+    },
+    {
+        title: "What can you do with Replit?",
+        image: ReplitLogo,
+        author: {
+            name: "Clever Programmer",
+            image: CPlogo
+        }
+    },
+    {
+        title: "The ultimate JavaScript Course for beginners by Clever Programmer!",
+        image: TutorialImg,
+        author: {
+            name: "Rafeh Qazi",
+            image: Qazi
+        }
+    },
+]
+
 const Recommendations = () => {
     return (
         <div className='wrapper h-screen min-w-[10rem] max-w-[30rem] flex-[1.2] p-[2rem] '>
@@ -22,33 +65,37 @@ const Recommendations = () => {
                 <div className='authorProfileImageContainer h-[5rem] w-[5rem] rounded-full overflow-hidden  ' >
                     <Image src={Qazi} alt='authorlogo' width={100} height={100} />
                 </div>
-                <div className='authorName font-semibold mb-[.2rem] mt-[1rem] '>Rafeh Qazi</div>
-                <div className='authorFollowing font-semibold mb-[.2rem] mt-[1rem] text-[#787878] '>1M followers</div>
+                <div className='authorName font-semibold mt-[.5rem] '>Rafeh Qazi</div>
+                <div className='authorFollowing font-semibold mb-[.2rem] text-[#787878] '>1M followers</div>
                 <div className='authorActions flex gap-[.6rem] my-[1rem] ' >
                     <button className='actionButton bg-[#1A8917] text-white rounded-full px-[.6rem] py-[.4rem] text-sm ' >follow</button>
                     <button className='actionButton bg-[#1A8917] text-white rounded-full px-[.6rem] py-[.4rem] text-sm '><MdMarkEmailRead /></button>
                 </div>
             </div>
 
-            <div className="recommendationsContainer">
-                <div className="title">More from Medium</div>
+            <div className="title pb-[.5rem]">More from Medium</div>
+            <div className="recommendationsContainer overflow-y-scroll scroll-smooth scrollbar-thin scrollbar-thumb-slate-200 h-[15.4rem]">
                 <div className="articlesContainer">
-                    <div className="articlesContentWrapper flex items-center justify-between cursor-pointer my-[1rem]  ">
-                        <div className="articleContent flex-[4]">
-                            <div className="recommendationAuthorContainer flex items-center gap-[.6rem]  ">
-                                <div className="recommendationAuthorProfileImageContainer rounded-full overflow-hidden h-[1.4rem] w-[1.4rem]  ">
-                                    <Image src={Qazi} alt='authorlogo' width={100} height={100} />
+                    {recommendedPost.map((article, index) => {
+                        return (
+                            <div key={index} className="articlesContentWrapper flex items-center justify-between cursor-pointer my-[1rem]  ">
+                                <div className="articleContent flex-[4]">
+                                    <div className="recommendationAuthorContainer flex items-center gap-[.6rem]  ">
+                                        <div className="recommendationAuthorProfileImageContainer rounded-full overflow-hidden h-[1.4rem] w-[1.4rem]  ">
+                                            <Image src={article.author.image} alt='authorlogo' width={100} height={100} />
+                                        </div>
+
+                                        <div className='recommendationAuthorName text-sm ' >{article.author.name}</div>
+                                    </div>
+                                    <div className="recommendationTitle font-bold ">{article.title}</div>
                                 </div>
 
-                                <div className='recommendationAuthorName text-sm ' >Rafeh Qazi</div>
+                                <div className="recommendationThumbnailContainer flex flex-1 items-center justify-center h-[4rem] w-[4rem] overflow-hidden ">
+                                    <Image className='recommendationThumbnai' objectFit='cover' src={article.image} height={100} width={100} alt="article image" />
+                                </div>
                             </div>
-                            <div className="recommendationTitle font-bold ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus.</div>
-                        </div>
-
-                        <div className="recommendationThumbnailContainer flex flex-1 items-center justify-center h-[4rem] w-[4rem] ">
-                            <Image className='recommendationThumbnai' objectFit='cover' src={JSLogo} height={100} width={100} alt="article image" />
-                        </div>
-                    </div>
+                        )
+                    })}
                 </div>
             </div>
 
