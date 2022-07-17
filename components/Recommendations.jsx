@@ -11,7 +11,7 @@ import JSLogo from '../public/static/jsLogo.png'
 const Recommendations = () => {
     return (
         <div className='wrapper h-screen min-w-[10rem] max-w-[30rem] flex-[1.2] p-[2rem] '>
-            <button className='accentedButton flex items-center justify-center text-sm bg-black text-white my-[2rem] py-[.6rem] rounded-full px-2 '>Get unlimited access</button>
+            <button className='accentedButton flex items-center justify-center text-sm bg-black text-white my-[2rem] py-[.6rem] rounded-full px-[8rem] '>Get unlimited access</button>
 
             <div className="searchBar flex items-center gap-[.6rem] h-[2.6rem] border px-[1rem] rounded-full ">
                 <AiOutlineSearch />
