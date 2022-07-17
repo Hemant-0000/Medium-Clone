@@ -5,7 +5,7 @@ import banner from '../public/static/banner.png'
 const Banner = () => {
     return (
         <div className='h-max-[10rem] flex items-center justify-center bg-[#FCC017] border-y border-black '>
-            <div className='content max-w-7xl flex-1 flex items-center justify-between ' >
+            <div className='content max-w-7xl space-x-14 flex items-center justify-between ' >
 
                 <div className='space-y-5  '>
                     <h1 className='max-w-xl text-[6rem] font-serif ' >Stay Curious.</h1>
