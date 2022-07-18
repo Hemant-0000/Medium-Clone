@@ -2,8 +2,14 @@ import Head from 'next/head'
 import Banner from '../components/Banner'
 import Header from '../components/Header'
 import PostCard from '../components/PostCard'
+import { useContext } from 'react'
+import { MediumContext } from '../context/MediumContext'
 
 export default function Home() {
+
+  const {posts, users} = useContext(MediumContext)
+  console.log(users)
+
   return (
     <div className='wrapper mx-auto '>
       <Head>
