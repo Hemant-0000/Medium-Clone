@@ -23,6 +23,28 @@ const MediumProvider = ({ children }) => {
         getUsers()
     }, [])
 
+    useEffect(() => {
+        const getPosts = async () => {
+            const querySnapshot = await getDocs(collection(db, 'articles'))
+            setPosts(querySnapshot.docs.map(doc => {
+                return {
+                    id: doc.id,
+                    body: doc.data().body,
+                    brief: doc.data().brief,
+                    category: doc.data().category,
+                    postLength: doc.data().postLength,
+                    bannerImage: doc.data().bannerImage,
+                    title: doc.data().title,
+                    // comments: doc.data().comments,
+                    postedOn: doc.data().postedOn.toDate(),
+                    author: doc.data().author,
+                }
+            }))
+        }
+        getPosts()
+    }, [])
+
+
     return <MediumContext.Provider value={{ users, posts }} >
         {children}
     </MediumContext.Provider>

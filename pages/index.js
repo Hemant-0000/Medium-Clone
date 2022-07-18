@@ -7,8 +7,9 @@ import { MediumContext } from '../context/MediumContext'
 
 export default function Home() {
 
-  const {posts, users} = useContext(MediumContext)
+  const { posts, users } = useContext(MediumContext)
   console.log(users)
+  console.log(posts)
 
   return (
     <div className='wrapper mx-auto '>
@@ -24,10 +25,11 @@ export default function Home() {
       <div className='main flex justify-center '>
         <div className='container max-w-7xl flex-1 '>
           <div className='postsList flex flex-col gap-3 p-2 sm:grid-cols-2 md:gap-6 md:p-6 lg:grid-cols-3   '>
-            <PostCard />
-            <PostCard />
-            <PostCard />
-            <PostCard />
+
+            {posts.map(post => {
+              return <PostCard post={post} key={post.id}  />
+            })}
+
           </div>
         </div>
       </div>
