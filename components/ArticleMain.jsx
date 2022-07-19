@@ -1,6 +1,4 @@
 import React from 'react'
-import Image from 'next/image'
-import qazi from '../public/static/qazi.jpg'
 import { AiFillPlayCircle } from 'react-icons/ai'
 import { IoLogoTwitter } from 'react-icons/io'
 import { FaFacebook } from 'react-icons/fa'
@@ -8,7 +6,6 @@ import { GrLinkedin } from 'react-icons/gr'
 import { HiOutlineLink } from 'react-icons/hi'
 import { BiBookmarks } from 'react-icons/bi'
 import { FiMoreHorizontal } from 'react-icons/fi'
-import bannerImg from '../public/static/tutorial.jpg'
 
 const ArticleMain = ({post, author}) => {
     console.log(author)
