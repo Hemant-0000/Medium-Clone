@@ -5,6 +5,7 @@ import { signInWithPopup, signOut } from "firebase/auth";
 
 const MediumContext = createContext()
 
+
 const MediumProvider = ({ children }) => {
     const [users, setUsers] = useState([])
     const [posts, setPosts] = useState([])

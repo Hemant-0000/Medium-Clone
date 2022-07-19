@@ -36,8 +36,8 @@ const PostCard = ({ post }) => {
                         <span className='articlesDetails my-2 text-[.8rem]  '>
                             {new Date(post.postedOn).toLocaleDateString('en-US', {
                                 day: 'numeric', month: 'short'
-                            })}
-                            • {post.postLength} min read • <span className='category bg-[#F2F3F2] p-1 rounded-full '>{post.category}</span>
+                            })} {" "}
+                             • {post.postLength} min read • <span className='category bg-[#F2F3F2] p-1 rounded-full '>{post.category}</span>
                         </span>
                         <span className='bookmarkContainer cursor-pointer '><FiBookmark className='h-5 w-5' /></span>
                     </div>
