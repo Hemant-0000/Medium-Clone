@@ -39,8 +39,8 @@ const ArticleMain = ({post, author}) => {
                     </div>
                 </div>
                 <div className="articleMainContainer flex flex-col gap-[1rem] ">
-                    <div className="bannerContainer h-[18rem] w-full grid center overflow-hidden mb-[2rem] ">
-                        <Image className='image' objectFit='cover' src={`https://res.cloudinary.com/demo/image/fetch/${post?.bannerImage}`} height={100} width={100} alt='bannerImg'/>
+                    <div className="bannerContainer h-[18rem] w-full grid center object-cover overflow-hidden mb-[2rem] ">
+                        <img className='image w-full h-[20rem] ' src={`https://res.cloudinary.com/demo/image/fetch/${post?.bannerImage}`} alt='bannerImg'/>
                     </div>
                     <h1 className='title font-bold text-3xl  ' >{post?.title}</h1>
                     <div className='subtitle font-mediumSerifItalic text-[1.4rem] text-[#292929] ' >
