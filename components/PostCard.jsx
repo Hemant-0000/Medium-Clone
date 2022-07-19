@@ -45,7 +45,7 @@ const PostCard = ({ post }) => {
 
 
                 <div className='thumbnailContainer flex-1 ' >
-                    <img width={100} height={100} className='thumbnail' objectFit='cover' src={`https://res.cloudinary.com/demo/image/fetch/${post.bannerImage}`} alt='logo' />
+                    <Image width={100} height={100} className='thumbnail' objectFit='cover' src={`https://res.cloudinary.com/demo/image/fetch/${post.bannerImage}`} alt='logo' />
                 </div>
 
             </div>
