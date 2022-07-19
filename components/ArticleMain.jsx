@@ -11,13 +11,14 @@ import { FiMoreHorizontal } from 'react-icons/fi'
 import bannerImg from '../public/static/tutorial.jpg'
 
 const ArticleMain = ({post, author}) => {
+    console.log(author)
     return (
         <div className='wrapper flex items-center justify-center flex-[3] border-l border-r ' >
             <div className='content overflow-y-scroll scroll-smooth scrollbar-thin scrollbar-thumb-slate-200 h-screen w-full p-[2rem]  ' >
                 <div className="postHeaderContainer flex justify-between items-center mt-[2.2rem] mb-[1.2rem]  ">
                     <div className="authorContainer flex gap-[1rem]  ">
-                        <div className="authorProfileImageContainer h-[3rem] w-[3rem] grid center rounded-full overflow-hidden ">
-                            <Image objectFit='cover' width={100} height={100} className='image' src={qazi} alt='author image' />
+                        <div className="authorProfileImageContainer h-[3rem] w-[3rem] grid center rounded-full object-cover overflow-hidden ">
+                            <img className='image w-[49px] h-[49px] ' src={author?.imageUrl} alt='author image' />
                         </div>
                         <div className='columns flex-1 flex flex-col justify-center  '>
                             <div>{author?.name}</div>
