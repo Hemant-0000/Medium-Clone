@@ -1,4 +1,3 @@
-import { async } from '@firebase/util'
 import { addDoc, collection, serverTimestamp } from 'firebase/firestore'
 import React, { useContext, useState } from 'react'
 import { MediumContext } from '../context/MediumContext'

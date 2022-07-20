@@ -22,6 +22,7 @@ const Header = () => {
       left: '50%',
       right: 'auto',
       bottom: 'auto',
+      backgroundColor: '#fff',
       marginRight: '-50%',
       transform: 'translate(-50%, -50%)',
     },

@@ -8,7 +8,6 @@ import { BiBookmarks } from 'react-icons/bi'
 import { FiMoreHorizontal } from 'react-icons/fi'
 
 const ArticleMain = ({post, author}) => {
-    console.log(author)
     return (
         <div className='wrapper flex items-center justify-center flex-[3] border-l border-r ' >
             <div className='content overflow-y-scroll scroll-smooth scrollbar-thin scrollbar-thumb-slate-200 h-screen w-full p-[2rem]  ' >
